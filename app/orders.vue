@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Work Orders</h3>
+    <h3>Work Orders ({{ this.count }}) </h3>
     <form @submit.prevent="searchList()">
       <label for="name">Enter a keyword of phrase here</label>
       <input type="text" id="name" placeholder="Search" v-model="search">
@@ -29,22 +29,32 @@
   </div>
 </template>
 <script>
+const getURL = (page, search) => {
+
+}
+
 module.exports = {
   data: function () {
     return {
       orders: [],
       search: '',
-      url: "/orders/WorkOrders"
+      count: 0,
+      get: 50,
+      url: `/orders/WorkOrders?$top=50&$skip=0&$count=true`
     };
   },
   props: ['user'],
   async mounted() {
-    this.orders = (await (await fetch(this.url)).json())?.value;
+    const result = (await (await fetch(this.url)).json());
+    this.orders = result.value;
+    this.count = result["@odata.count"]
   },
   methods: {
     async searchList() {
-      const url = this.search ? `${this.url}?$search=${this.search}` : this.url;
-      this.orders = (await (await fetch(url)).json())?.value;
+      const url = this.search ? `${this.url}&$search=${this.search}` : this.url;
+      const result = (await (await fetch(url)).json());
+      this.orders = result.value;
+      this.count = result["@odata.count"]
     }
   }
 };
