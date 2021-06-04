@@ -8,11 +8,9 @@ const cds = require("@sap/cds");
  * @param {function} next 
  */
 module.exports = (req, res, next) => {
-  console.log('user', req?.user?.id)
-  req.user = new cds.User(req?.user)
   if (req.user) {
+    req.user = new cds.User(req?.user)
     next()
-    //res.status(401).send('Not Logged In');
   } else {
     res.status(401);
   }

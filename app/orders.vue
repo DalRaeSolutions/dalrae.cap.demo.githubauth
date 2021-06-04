@@ -2,7 +2,12 @@
   <div>
     <div class="vertical-center" style="justify-content:space-between;">
       <h1>Orders</h1>
-      <a class="text-right" href="/auth/logout">Logout</a>
+      <div>
+        <a class="text-right" href="/auth/logout">
+          <img style="vertical-align:middle;" :src="user.avatar_url" alt="avatar" height="24" width="24" />
+          Logout
+        </a>
+      </div>
     </div>
     <p>Welcome back <b>{{ user.name }}</b>, this is your work list for today.</p>
     <h3>Work orders</h3>
