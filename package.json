@@ -55,7 +55,7 @@
   "cds": {
     "requires": {
       "auth": {
-        "impl": "auth/authHandler.js"
+        "impl": "auth/handler.js"
       }
     }
   }

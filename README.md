@@ -1,27 +1,11 @@
 # About this PoC
 
-In this repository you'll find one way to implement a custom passport based authentication strategy 
-in a CAP project. It demonstrates:
+Demonstrating a CAP application with a VUE front end that uses social login in the form of Github logon using Passport as middleware, and a custom CAP authorisation function. 
 
-- three different users with three different levels of access
-- access management and security at the table entity level
-- access management and security at the service level
-- custom passport strategy, can be based on any of the existing strategies
-- integration tests for all the above
+## To replicate
 
-# Access management
+You'll need a Github oAuth app, please use [this](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) helpful document to create one. For Homepage URL, enter `http://localhost:4004`, and for authorisation callback URL, enter `http://localhost:4004/auth/github/callback`.
 
-### Application security has various layers
+After that, copy the client ID, secret and callback URL into the provided `.env.example` and rename it to `.env`. 
 
-- Authentication, or the notion that you need to have a valid user and password
-- Authorisation, or the notion that you need to have a particular role to access particular services. This has 3 levels:
-  - Access to a particular service based on your role
-  - Access to a particular enddpoint on that service based on your role
-  - Access to particular rows of information inside an endpoint based on your role
-
-To demonstrate these, there is provided a work order service. 
-
-- Without a valid login, the user is rejected 
-- With a valid login but no roles and attributes assigned, the user gets no information out of the service
-- With a valid login and an `OrderUser` role, the user gets information only about the assigned customer
-- With a valid login and an `OrderAdmin` role, the user gets information for all customers
+If you do not run this project under port 4004, you have to adjust the paths used in your oAuth app. 
