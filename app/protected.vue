@@ -7,17 +7,17 @@
       </h1>
       <div>
         <a @click.prevent="() => view = view === 'orders' ? 'profile' : 'orders'" class="button muted-button text-right">
-          {{ view === 'orders' ? user.name : 'Home' }}
+          {{ view === 'orders' ? user.name : 'Work Orders' }}
         </a>
         <a class="button text-right" href="/auth/logout">
           Logout
         </a>
       </div>
     </nav>
-    <div v-if="view === 'profile'">
+    <div v-show="view === 'profile'">
         <profile :user="user" />
     </div>
-    <div v-if="view === 'orders'">
+    <div v-show="view === 'orders'">
         <orders :user="user" />
     </div>
   </div>
@@ -33,12 +33,7 @@ module.exports = {
     profile: httpVueLoader('profile.vue'),
     orders: httpVueLoader('orders.vue')
   },
-  props: ['user'],
-  methods: {
-    profile() {
-      
-    }
-  }
+  props: ['user']
 };
 </script>
 </script>
