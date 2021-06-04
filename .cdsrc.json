@@ -1,0 +1,88 @@
+{
+  "mtx": {
+    "element-prefix": [
+      "Z_",
+      "ZZ_"
+    ],
+    "namespace-blacklist": [
+      "com.sap.",
+      "sap."
+    ],
+    "entity-whitelist": [
+      "dalrae.cap.auth.demo"
+    ],
+    "service-whitelist": [
+      "OrderService",
+      "AdminService"
+    ]
+  },
+  "demo": {
+    "users": {
+      "admin": {
+        "password": "",
+        "jwt": {
+          "userInfo": {
+            "logonName": "admin",
+            "email": "admin@example.com"
+          },
+          "scopes": [
+            "authenticated-user",
+            "openid",
+            "OrderAdmin",
+            "OrderUser"
+          ]
+        },
+        "userAttributes": {
+          "customer": "%"
+        }
+      },
+      "defence": {
+        "password": "",
+        "jwt": {
+          "userInfo": {
+            "logonName": "defence",
+            "email": "defence@example.com"
+          },
+          "scopes": [
+            "authenticated-user",
+            "openid",
+            "OrderUser"
+          ]
+        },
+        "userAttributes": {
+          "customer": "166389bb-f350-414a-a13f-57d27ad43f42"
+        }
+      },
+      "other": {
+        "password": "",
+        "jwt": {
+          "userInfo": {
+            "logonName": "other",
+            "email": "other@example.com"
+          },
+          "scopes": [
+            "authenticated-user",
+            "openid",
+            "OrderUser"
+          ]
+        },
+        "userAttributes": {
+          "customer": "266389bb-f350-414a-a13f-57d27ad43f42"
+        }
+      },
+      "noroles": {
+        "password": "",
+        "jwt": {
+          "userInfo": {
+            "logonName": "other",
+            "email": "other@example.com"
+          },
+          "scopes": [
+            "authenticated-user",
+            "openid"
+          ]
+        }
+      }
+    }
+  }
+}

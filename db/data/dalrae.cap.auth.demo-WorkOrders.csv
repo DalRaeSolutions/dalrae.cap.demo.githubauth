@@ -1,0 +1,7 @@
+ID;startDate;endDate;customer_ID;createdBy;description;createdAt;createdBy;modifiedAt;modifiedBy
+afcf0d73-7a89-4416-90b7-b30a47bff8b8;2020-01-10;2020-01-15;166389bb-f350-414a-a13f-57d27ad43f42;bob;Broken door;2020-01-01;admin;2020-01-01;admin
+bfcf0d73-7a89-4416-90b7-b30a47bff8b8;2020-01-10;2020-01-15;166389bb-f350-414a-a13f-57d27ad43f42;admin;Broken window;2020-01-01;admin;2020-01-01;admin
+cfcf0d73-7a89-4416-90b7-b30a47bff8b8;2020-01-10;2020-01-15;166389bb-f350-414a-a13f-57d27ad43f42;admin;Broken toilet;2020-01-01;admin;2020-01-01;admin
+a03b1d97-2939-468d-a6ff-a19d657bcf92;2020-01-10;2020-01-15;266389bb-f350-414a-a13f-57d27ad43f42;bob;Missing things;2020-01-01;admin;2020-01-01;admin
+b03b1d97-2939-468d-a6ff-a19d657bcf92;2020-01-10;2020-01-15;266389bb-f350-414a-a13f-57d27ad43f42;bob;Broken things;2020-01-01;admin;2020-01-01;admin
+b33b1d97-2939-468d-a6ff-a19d657bcf92;2020-01-10;2020-01-15;266389bb-f350-414a-a13f-57d27ad43f42;anonymous;Broken things;2020-01-01;admin;2020-01-01;admin
