@@ -4,7 +4,7 @@
       <h1>Orders</h1>
       <div>
         <a class="text-right" href="/auth/logout">
-          <img style="vertical-align:middle;" :src="user.avatar_url" alt="avatar" height="24" width="24" />
+          <img style="vertical-align:middle;" :src="user.avatar_url" alt="avatar" height="30" width="30" />
           Logout
         </a>
       </div>
