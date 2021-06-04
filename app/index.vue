@@ -4,7 +4,7 @@
         <login />
     </div>
     <div v-if="loggedIn">
-        <orders :user="user" />
+        <protected :user="user" />
     </div>
   </main>
 </template>
@@ -13,7 +13,7 @@
 module.exports = {
   components: {
     login: httpVueLoader("login.vue"),
-    orders: httpVueLoader("orders.vue"),
+    protected: httpVueLoader("protected.vue"),
   },
   data: function () {
     return {

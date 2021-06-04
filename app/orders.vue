@@ -1,15 +1,5 @@
 <template>
   <div>
-    <div class="vertical-center" style="justify-content:space-between;">
-      <h1>Orders</h1>
-      <div>
-        <a class="text-right" href="/auth/logout">
-          <img style="vertical-align:middle;" :src="user.avatar_url" alt="avatar" height="30" width="30" />
-          Logout
-        </a>
-      </div>
-    </div>
-    <p>Welcome back <b>{{ user.name }}</b>, this is your work list for today.</p>
     <h3>Work orders</h3>
     <table id="orders" class="striped-table">
       <thead>
@@ -39,7 +29,7 @@ module.exports = {
     };
   },
   props: ['user'],
-  async created() {
+  async mounted() {
     this.orders = (
       await (await fetch("/orders/WorkOrders?$expand=customer")).json()
     )?.value;
