@@ -1,6 +1,9 @@
 {
   "name": "tenants_security",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=0.14"
+  },
   "description": "A simple CAP project.",
   "repository": "<Add your repository here>",
   "license": "UNLICENSED",
