@@ -1,10 +1,10 @@
 <template>
   <main>
-    <div v-if="!loggedIn">
-        <login />
+    <div v-if="!loggedIn && !user.id">
+      <login />
     </div>
     <div v-if="loggedIn">
-        <protected :user="user" />
+      <protected :user="user" />
     </div>
   </main>
 </template>
@@ -18,16 +18,16 @@ module.exports = {
   data: function () {
     return {
       loggedIn: false,
-      user: {}
+      user: {},
     };
   },
 
   async mounted() {
-    const response = await fetch('/auth/my-user')
-    if(response.status === 200) {
+    const response = await fetch("/auth/my-user");
+    if (response.status === 200) {
       this.user = await response.json();
-      this.loggedIn = Object.keys(this.user).length > 0
+      this.loggedIn = Object.keys(this.user).length > 0;
     }
-  }
+  },
 };
 </script>
