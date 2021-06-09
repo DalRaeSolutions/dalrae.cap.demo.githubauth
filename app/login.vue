@@ -1,13 +1,13 @@
 <template>
 <div class="min-h-screen bg-white flex">
-  <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+  <div class=" overflow-hidden flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24 md:text-xl text-4xl">
     <div class="mx-auto w-full max-w-sm lg:w-96">
       <div>
         <div class="wave waveAnimation">👋</div>
         <h2 class="font-extrabold text-center">
           <a href="/auth/github">
             <div 
-              class="rounded-md cursor-pointer leading-normal text-8xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 hover:shadow-inner shadow"
+              class="rounded-md cursor-pointer leading-normal text-8xl sm:text-10xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 hover:shadow-inner shadow"
               >Log on!
             </div>
           </a>
@@ -16,22 +16,18 @@
     </div>
   </div>
   <div class="hidden lg:block relative w-0 flex-1 bg-gradient-to-r from-blue-50 via-gray-100 to-gray-50">
-    <img class="shadow-lg shadow-inner absolute inset-0 h-full w-full object-cover" src="/background.svg" alt="">
+    <img class="shadow-lg shadow-inner absolute inset-0 h-full w-full object-contain" src="/background.svg" alt="">
   </div>
 </div>
 </template>
 
 <style scoped>
-  a {
-    color: black;
-    text-decoration: none;
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    svg {
+      width: 90%;
+    }
   }
-
-  a.loading {
-    opacity: 0.3;
-    pointer-events: none;
-  }
-	.wave {
+  .wave {
 		font-size: 4em;
 		margin-left: calc(50% - 0.5em);
 		padding-bottom: 0.5em;
