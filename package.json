@@ -22,6 +22,7 @@
   },
   "scripts": {
     "start": "npx cds watch",
+    "build": "npm i -g @sap/cds-dk",
     "watch": "cds watch",
     "dev": "npm run watch",
     "tailwind": "pnpx tailwindcss-cli@latest build ./app/tailwind.css -o ./app/style.css",
