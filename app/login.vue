@@ -5,10 +5,9 @@
       <div>
         <div class="wave waveAnimation">👋</div>
         <h2 class="font-extrabold text-center">
-          <!-- <div class="text-5xl bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-900">You need to...</div> -->
           <a href="/auth/github">
             <div 
-              class="rounded-md cursor-pointer leading-normal text-8xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 hover:shadow-inner shadow-xl"
+              class="rounded-md cursor-pointer leading-normal text-8xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 hover:shadow-inner shadow"
               >Log on!
             </div>
           </a>
