@@ -21,7 +21,7 @@
     "supertest": "^6.1.3"
   },
   "scripts": {
-    "start": "cds watch",
+    "start": "npx cds watch",
     "watch": "cds watch",
     "dev": "npm run watch",
     "tailwind": "pnpx tailwindcss-cli@latest build ./app/tailwind.css -o ./app/style.css",
