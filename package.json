@@ -21,7 +21,7 @@
     "supertest": "^6.1.3"
   },
   "scripts": {
-    "start": "npx cds watch",
+    "start": "npx cds serve all --with-mocks --in-memory",
     "build": "npm i -g @sap/cds-dk",
     "watch": "cds watch",
     "dev": "npm run watch",
