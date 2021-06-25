@@ -59,7 +59,7 @@
   "cds": {
     "requires": {
       "auth": {
-        "impl": "auth/handler.js"
+        "impl": "./auth/handler.js"
       }
     }
   }
